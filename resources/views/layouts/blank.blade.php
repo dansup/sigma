@@ -13,10 +13,7 @@
 </head>
 <body class="{{Auth::check()?'loggedIn':'guest'}}">
     <div id="app">
-        @include('layouts.partial.nav')
-        <main class="py-4">
-            @yield('content')
-        </main>
+        @yield('content')
     </div>
     @stack('scripts')
 </body>
