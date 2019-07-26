@@ -49,4 +49,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Channel::class, 'owner_id', 'id');
     }
+
+    public function url()
+    {
+        return url('/u/' . $this->id);
+    }
 }

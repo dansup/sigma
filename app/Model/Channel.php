@@ -25,4 +25,9 @@ class Channel extends Model
 	{
 		return url('/dashboard/channel/manage/' . $this->id);
 	}
+
+	public function messages()
+	{
+		return $this->hasMany(Message::class);
+	}
 }

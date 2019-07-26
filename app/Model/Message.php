@@ -15,4 +15,9 @@ class Message extends Model
 	 * @var bool
 	 */
 	public $incrementing = false;
+
+	public function owner()
+	{
+		return $this->belongsTo(User::class, 'owner_id');
+	}
 }
